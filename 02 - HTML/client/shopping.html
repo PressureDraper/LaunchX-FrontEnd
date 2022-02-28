@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>Shopping</title>
+</head>
+<body>
+    <header>
+        <img src="astrocake.png" alt="astrocake" width="auto" height="200">
+        <h1>Welcome to AstroCake</h1>
+    </header>
+
+    <nav>
+        <h2>Explore our page</h2>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./flavors.html">Flavors</a></li>
+            <li><a href="./ournments.html">Ournments</a></li>
+        </ul>
+    </nav>
+
+    <form action="./shopping.html">
+        <fieldset>
+            <legend>Place your Order</legend>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name"><br><br>
+
+            <label for="phone">Phone:</label><br>
+            <input type="tel" name="tel" maxlength="10" id="phone"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" name="email" id="email"><br><br>
+
+            <label for="specs">Specifications:</label><br>
+            <textarea name="specs" id="specs" cols="30" rows="5" style="resize: none;"></textarea><br><br>
+
+            <label for="flavors">Select your Flavors (2 max):</label><br>
+            <input class="single-checkbox" type="checkbox" value="Mocha" id="mocha">
+            <label for="mocha">Mocha</label>
+            <input class="single-checkbox" type="checkbox" value="Cajeta" id="cajeta">
+            <label for="cajeta">Cajeta</label>
+            <input class="single-checkbox" type="checkbox" value="Strawberry" id="strawberry">
+            <label for="strawberry">Strawberry</label><br><br>
+            <input class="single-checkbox" type="checkbox" value="Peach" id="peach">
+            <label for="peach">Peach</label>
+            <input class="single-checkbox" type="checkbox" value="cm" id="cm">
+            <label for="cm">Chocolate Mint</label>
+            <input class="single-checkbox" type="checkbox" value="Truffle" id="truffle">
+            <label for="truffle">Truffle</label><br><br>
+
+            <label for="flavors">Select your Ournments (2 max):</label><br>
+            <input class="single-checkbox2" type="checkbox" value="dct" id="dct">
+            <label for="dct">Disney Cake Topper</label>
+            <input class="single-checkbox2" type="checkbox" value="wct" id="wct">
+            <label for="wct">Wedding Cake Topper</label>
+            <input class="single-checkbox2" type="checkbox" value="wct2" id="wct2">
+            <label for="wct2">Wedding Cake Topper V2</label><br><br>
+            <input class="single-checkbox2" type="checkbox" value="mmctp" id="mmctp">
+            <label for="mmctp">Mickey Mouse Cake Topper</label>
+            <input class="single-checkbox2" type="checkbox" value="sctp" id="sctp">
+            <label for="sctp">Siren Cake Topper</label>
+            <input class="single-checkbox2" type="checkbox" value="cc" id="cc">
+            <label for="cc">Curtain Cake</label><br><br><br>
+            
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <br><br>
+    <footer>
+        Schedule: Weekdays (9 AM - 9 PM) Weekends (9 AM - 2 PM)<br>
+        Address: Av. Xalapa #505<br>
+        Contact: 2281919845<br>
+        &copy; 2022 AstroCake. All rights reserved.
+    </footer>
+
+    <script>
+    $(document).ready(function () {
+        $("input[class='single-checkbox']").change(function () {
+            var maxAllowed = 2;
+            var cnt = $("input[class='single-checkbox']:checked").length;
+            if (cnt > maxAllowed) 
+            {
+                $(this).prop("checked", "");
+                alert('Select maximum ' + maxAllowed + ' flavors!');
+            }
+        });
+        $("input[class='single-checkbox2']").change(function () {
+            var maxAllowed = 2;
+            var cnt = $("input[class='single-checkbox2']:checked").length;
+            if (cnt > maxAllowed) 
+            {
+                $(this).prop("checked", "");
+                alert('Select maximum ' + maxAllowed + ' ournments!');
+            }
+        });
+    });
+    </script>
+</body>
+</html>
