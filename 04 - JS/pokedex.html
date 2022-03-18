@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" media="screen" />
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/640px-Pok%C3%A9_Ball_icon.svg.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div name="dexbody" id="dexbody">
+      <div name="dexball1" id="dexball1"></div>
+      <div name="dexball2" id="dexball2"></div>
+      <div name="dexball3" id="dexball3"></div>
+      <div name="dexball4" id="dexball4"></div>
+
+      <div name="screen" id="screen">
+        <div name="screen2" id="screen2">
+          <div id="teste">
+            <img id="simbol" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/640px-Pok%C3%A9_Ball_icon.svg.png" >      
+            <input  class= "searchBox" id ="searchBox" type="text" placeholder="Pokemon Name"" >
+            <input type="submit" value="SEARCH" id="searchButton" onclick="fetchPokemon()"></input>
+          </div>
+          <div id="basePokemon" class="hide">
+            <p id ='baseText'><strong> Base: </strong></p>
+            <p id ="hp"></p>
+            <p id ="atk"></pid></p>
+            <p id ="def"></p>
+            <p id ="spatk"></p>
+            <p id ="spdef"></p>
+            <p id ="spd"></p>
+          </div>
+          <div id="block">
+          <div>
+            <img id= "pokemonImg" src = ""></img>
+          </div>
+          <div id ="namePokemon">
+            <h3 name= "namePokemon" id="namePokemon"></h3> 
+          </div>
+          <div name ="types" id="types" class="hide">
+            <p id ='baseTextdois'><strong> Type: </strong></p>
+            <img src="" id= "typesUm">
+            <img src="" id= "typesDois">
+          </div>
+          <div name ="moves" id="moves" class="hide">
+            <p id ='basetext3' class="hide"><strong> Moves: </strong></p>
+            <div class="singlemv">
+              <p id ="mov1" class="move hide"></p>
+              <p id ="mov2" class="move hide"></p>
+              <p id ="mov3" class="move hide"></p>
+              <p id ="mov4" class="move hide"></p>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div name="dexball5" id="dexball5"></div>
+        <div id="line1"></div>
+        <div id="line2"></div>
+        <div id="line3"></div>
+      </div>
+      <div name="cut" id="cut"></div>
+    </div>
+    <script src="./js/pokemon.js"></script>
+  </body>
+</html>
